@@ -44,7 +44,7 @@ public class Praktikum1 {
                     (kata.charAt(w) >= 97 && kata.charAt(w) <= 122))) {
                 if(kata.charAt(w) == ' '){
                     continue;
-                }else{
+                }else if(kata.charAt(w) == '@'){
                     temp2 = w;
                     break;
                 }
@@ -57,7 +57,7 @@ public class Praktikum1 {
 
         z = (temp2+temp1)/2;
         y = temp2 - z;
-        x = temp1 - y;
+        x = y - temp1;
 
         System.out.println("Hasil : " + x + y + z);
     }
