@@ -16,49 +16,17 @@ public class Praktikum1 {
         String kata = "";
         System.out.print("Masukan kata : ");
         kata = scan.nextLine();
+        int hasil = 0;
+        int panjangKata = kata.length();
+        char karakter;
 
-        int temp1 = 0;
-        int temp2 = 0;
-        int spesialKarakter = -1;
-        int spasi = 0;
-        for(int m = kata.length()-1; m >= 0; m--){
-            if(!((kata.charAt(m) >= 48 && kata.charAt(m) <=57) ||
-                (kata.charAt(m) >= 65 && kata.charAt(m) <=90) ||
-                (kata.charAt(m) >= 97 && kata.charAt(m) <=122)))
-            {
-                if(spesialKarakter == -1){
-                    spesialKarakter = m;
-                }
-            }
-            if(kata.charAt(m) == ' '){
-                spasi = m;
-                break;
-            }
-        }
-        temp1 = spesialKarakter - spasi - 1;
-
-        for(int w = 0; w < kata.length(); w++) {
-
-            if (!((kata.charAt(w) >= 48 && kata.charAt(w) <= 57) ||
-                    (kata.charAt(w) >= 65 && kata.charAt(w) <= 90) ||
-                    (kata.charAt(w) >= 97 && kata.charAt(w) <= 122))) {
-                if(kata.charAt(w) == ' '){
-                    continue;
-                }else if(kata.charAt(w) == '@'){
-                    temp2 = w;
-                    break;
-                }
+        for(int l = 0; l < panjangKata; l++){
+            karakter = kata.charAt(l);
+            if(karakter >= 32 && karakter <= 90){
+                hasil += (int) karakter;
             }
         }
 
-        int x;
-        int y;
-        int z;
-
-        z = (temp2+temp1)/2;
-        y = temp2 - z;
-        x = y - temp1;
-
-        System.out.println("Hasil : " + x + y + z);
+        System.out.println("Hasil : " + hasil);
     }
 }

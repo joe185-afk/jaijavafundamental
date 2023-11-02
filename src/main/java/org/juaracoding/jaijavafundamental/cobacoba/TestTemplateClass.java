@@ -10,4 +10,6 @@ Version 1.0
 */
 
 public class TestTemplateClass {
+    String istri[] = new String[4];
+
 }
