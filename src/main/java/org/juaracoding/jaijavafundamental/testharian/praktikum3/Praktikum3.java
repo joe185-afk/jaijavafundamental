@@ -16,7 +16,7 @@ public class Praktikum3 {
         Random rando = new Random();
         int looping;
         char character;
-        int flag = 1;
+        int flag = 0;
 
         do{
             looping = rando.nextInt(25);
